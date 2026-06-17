@@ -1,6 +1,6 @@
-# Text Analyzer Pro (Phân Tích Văn Bản)
+# Text Analyzer (Phân Tích Văn Bản)
 
-Ứng dụng Desktop hỗ trợ chuẩn hóa và phân tích thống kê cấu trúc văn bản tiếng Việt, được xây dựng dựa trên kiến trúc phân lớp (Clean Architecture).
+Ứng dụng Desktop hỗ trợ chuẩn hóa và phân tích thống kê cấu trúc văn bản tiếng Việt, được xây dựng dựa trên kiến trúc phân lớp.
 
 ## Tính năng chính
 
@@ -31,17 +31,17 @@ Dự án áp dụng mô hình phân tách trách nhiệm rõ ràng:
 ```bash
 python -m venv venv
 ```
-Kích hoạt môi trường (Windows):
+   Kích hoạt môi trường (Windows):
 
 ```DOS
 venv\Scripts\activate
 ```
-Kích hoạt môi trường (macOS/Linux):
+   Kích hoạt môi trường (macOS/Linux):
 
 ```bash
 source venv/bin/activate
 ```
-Cài đặt dependencies:
+   Cài đặt dependencies:
 
 ```bash
 pip install -r requirements.txt
