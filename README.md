@@ -33,8 +33,9 @@ python -m venv venv
 ```
 Kích hoạt môi trường (Windows):
 
-DOS
+```DOS
 venv\Scripts\activate
+```
 Kích hoạt môi trường (macOS/Linux):
 
 ```bash
