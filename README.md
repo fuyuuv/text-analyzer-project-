@@ -8,11 +8,11 @@
     * Loại bỏ dấu câu và ký tự đặc biệt (giữ nguyên bảng chữ cái tiếng Việt).
 * **Phân tích ngôn ngữ (Analyzer):**
     * Đếm tổng số ký tự, số từ và số câu.
-    * Sử dụng AI (`underthesea`) để tách từ ghép tiếng Việt chính xác theo ngữ nghĩa.
+    * Sử dụng AI (`pyvi`) để tách từ ghép tiếng Việt chính xác theo ngữ nghĩa.
     * Trích xuất từ xuất hiện nhiều nhất.
     * Hiển thị danh sách Top N từ vựng có tần suất cao nhất trên bảng cuộn độc lập.
 * **Quản lý File:** Hỗ trợ import dữ liệu trực tiếp từ file `.txt`.
-* **Giao diện:** Dark Theme mang phong cách Discord, thiết kế dạng Split View bằng `CustomTkinter`.
+* **Giao diện:** Dark Theme, thiết kế dạng Split View bằng `CustomTkinter`.
 
 ## Kiến trúc hệ thống
 
