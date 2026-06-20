@@ -7,19 +7,19 @@ def analyze(text, top_n=5):
     if not text.strip():
         raise EmptyTextException("Văn bản đang trống, không thể tiến hành phân tích.")
 
-    # 1. Đếm ký tự
+    # Đếm ký tự
     char_count = len(text)
 
-    # 2. Đếm câu (Dùng Regex tách theo dấu câu thay vì dùng AI)
+    # Đếm câu (Dùng Regex tách theo dấu câu)
     sentences = [s for s in re.split(r'[.!?]+', text) if s.strip()]
     sentence_count = len(sentences)
 
-    # 3. Tách từ tiếng Việt bằng pyvi (nối từ ghép bằng dấu _)
+    # Tách từ tiếng Việt bằng pyvi (nối từ ghép bằng dấu _)
     tokenized_text = ViTokenizer.tokenize(text)
-    words = tokenized_text.split()
+    words = [w for w in tokenized_text.split() if any(c.isalnum() for c in w)]
     word_count = len(words)
 
-    # 4. Tìm Top N từ xuất hiện nhiều nhất
+    # Tìm Top N từ xuất hiện nhiều nhất
     if word_count > 0:
         word_freq = Counter(words)
         top_n_words = word_freq.most_common(top_n)

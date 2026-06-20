@@ -13,7 +13,6 @@ def _write_txt(file_path, content):
         f.write(content)
 
 # --- MAPPING ĐỊNH DẠNG FILE ---
-# Giúp hệ thống dễ dàng mở rộng định dạng mới (như .csv) mà không cần sửa code giao tiếp
 FILE_HANDLERS = {
     '.txt': {
         'read': _read_txt,
