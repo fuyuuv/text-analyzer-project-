@@ -46,7 +46,7 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-**3. Chạy ứng dụng:
+**3. Chạy ứng dụng:**
 
 ```bash
 python main.py

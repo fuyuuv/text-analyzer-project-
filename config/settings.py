@@ -4,7 +4,7 @@ APP_GEOMETRY = "1280x960"
 APPEARANCE_MODE = "dark"  # Bắt buộc chế độ tối
 DEFAULT_TOP_N = 5         # Giá trị mặc định cho top N từ
 
-# --- BẢNG MÀU DISCORD THEME ---
+# --- BẢNG MÀU ---
 COLOR_BG_MAIN = "#36393f"      # Màu nền cửa sổ chính
 COLOR_BG_SECONDARY = "#2f3136" # Màu nền các Component
 COLOR_BG_DARK = "#202225"      # Màu nền ô Text

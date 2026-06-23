@@ -15,7 +15,7 @@ class TextInput(ctk.CTkFrame):
         self.textbox.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
 
     def get_text(self):
-        """Trích xuất chuỗi văn bản từ dòng 1 tới cuối"""
+        """Trích xuất chuỗi văn bản từ đầu tới cuối"""
         return self.textbox.get("1.0", "end-1c")
     
     def set_text(self, text):

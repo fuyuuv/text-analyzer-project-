@@ -1,11 +1,6 @@
-# Môi trường ảo
 venv
 .venv
-
-# Bộ nhớ đệm Python
 __pycache__
 .pyc
-
-# Cấu hình IDE (nếu dùng VS Code hoặc PyCharm)
 .vscode
 .idea
