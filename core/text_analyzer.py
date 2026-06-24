@@ -8,7 +8,7 @@ def analyze(text, top_n=5):
         raise EmptyTextException("Văn bản đang trống, không thể tiến hành phân tích.")
 
     # Đếm ký tự
-    char_count = len(text)
+    char_count = len("".join(text.split()))
 
     # Đếm câu (Dùng Regex tách theo dấu câu)
     sentences = [s for s in re.split(r'[.!?]+', text) if s.strip()]
