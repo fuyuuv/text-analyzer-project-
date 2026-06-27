@@ -12,20 +12,26 @@ COLOR_BTN_PRIMARY = "#5865F2"  # Màu Blurple
 COLOR_BTN_HOVER = "#4752C4"    # Màu khi di chuột vào nút
 COLOR_TEXT_MAIN = "#dcddde"    # Màu chữ mặc định
 
-# --- CẤU HÌNH XỬ LÝ NGÔN NGỮ ---
-# Pattern loại bỏ ký tự đặc biệt, chỉ giữ lại chữ cái (gồm tiếng Việt), số và khoảng trắng
-VIET_CHAR_PATTERN = (
-    r'[^a-zA-Z0-9\s'
-    r'àáạảãâầấậẩẫăằắặẳẵ'
-    r'èéẹẻẽêềếệểễ'
-    r'ìíịỉĩ'
-    r'òóọỏõôồốộổỗơờớợởỡ'
-    r'ùúụủũưừứựửữ'
-    r'ỳýỵỷỹđ'
-    r'ÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴ'
-    r'ÈÉẸẺẼÊỀẾỆỂỄ'
-    r'ÌÍỊỈĨ'
-    r'ÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠ'
-    r'ÙÚỤỦŨƯỪỨỰỬỮ'
-    r'ỲÝỴỶỸĐ]'
-)
+# --- DANH SÁCH STOP WORDS TIẾNG VIỆT ---
+VIETNAMESE_STOP_WORDS = {
+    "là", "của", "và", "thì", "mà", "ở", "có", "cho", "được", "với", "một", "các",
+    "những", "để", "như", "trên", "tại", "này", "khi", "đã", "sẽ", "đang", "từ",
+    "đến", "trong", "ra", "vào", "về", "cũng", "nhưng", "lại", "rằng", "nếu", "bởi"
+}
+
+# --- TỪ ĐIỂN VIẾT TẮT THÔNG DỤNG ---
+ABBREVIATIONS_DICT = {
+    "ko": "không",
+    "k": "không", 
+    "hong": "không", 
+    "hông": "không",
+    "dc": "được", 
+    "đc": "được", 
+    "vs": "với", 
+    "bn": "bạn", 
+    "r": "rồi", 
+    "rùi": "rồi",
+    "đg": "đang", 
+    "thik": "thích", 
+    "cx": "cũng"
+}

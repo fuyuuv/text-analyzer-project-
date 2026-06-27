@@ -55,19 +55,25 @@ class MainWindow(ctk.CTk):
                 messagebox.showerror("Lỗi Import", str(e))
 
     def handle_process_text(self, options):
-        """Hứng sự kiện từ ProcessorPanel, gọi Core xử lý chuỗi và in ra ResultView"""
         text = self.text_input.get_text()
         if not text.strip():
             messagebox.showwarning("Cảnh báo", "Vui lòng nhập văn bản vào khung Input!")
             return
         
-        if options["lower"]:
-            text = text_processor.to_lower_case(text)
-        elif options["upper"]:
-            text = text_processor.to_upper_case(text)
+        if options.get("expand_abbr"):
+            text = text_processor.expand_abbreviations(text)
+
+        if options.get("whitespace"):
+            text = text_processor.remove_extra_whitespace(text)
         
-        if options["no_punct"]:
-            text = text_processor.remove_special_characters(text)
+        if options.get("lower"):
+            text = text_processor.to_lower_case(text)
+        elif options.get("upper"):
+            text = text_processor.to_upper_case(text)
+        elif options.get("title"):
+            text = text_processor.to_title_case(text)
+        elif options.get("sentence"):
+            text = text_processor.to_sentence_case(text)
 
         self.result_view.set_text(text)
 
